@@ -14,6 +14,7 @@ int main(int argc, char *argv[]) {
         int n = 1;
         while (n < argc) {
             strcat(text, argv[n]);
+            strcat(text, " ");
             n++;
         }
 
