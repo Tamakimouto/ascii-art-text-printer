@@ -9,7 +9,7 @@ int main(int argc, char *argv[]) {
 
     if (argc > 1) {
 
-        char text[BUFF_SIZE];
+        char text[BUFF_SIZE] = {0};
 
         int n = 1;
         while (n < argc) {
