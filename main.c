@@ -1,29 +1,56 @@
 #include <stdio.h>
 #include <string.h>
 
+#define BUFF_SIZE 256
+
 void print(char* string);
 
-int main() {
-    printf("--------------------------------------------------------------\n");
-    printf("\n");
-    printf("                     ASCII Art Text Printer\n");
-    printf("\n");
-    printf("--------------------------------------------------------------\n");
-    printf("\n");
-    printf("This program takes a string of text as input from the user and\n");
-    printf("outputs that text as ASCII art to the terminal.\n");
-    printf("\n");
-    printf("Enter the string to convert: ");
-    char text[256];
-    fgets(text, sizeof(text), stdin);
-    int i = 0;
-    char ptr;
-    while(text[i]) {
-        ptr = text[i];
-        text[i] = (toupper(ptr));
-        ++i;
+int main(int argc, char *argv[]) {
+
+    if (argc > 1) {
+
+        char text[BUFF_SIZE] = {0};
+
+        int n = 1;
+        while (n < argc) {
+            strcat(text, argv[n]);
+            strcat(text, " ");
+            n++;
+        }
+
+        n = 0;
+        char ptr;
+        while(text[n]) {
+            ptr = text[n];
+            text[n] = (toupper(ptr));
+            n++;
+        }
+
+        print(text);
+
+    } else {
+        printf("--------------------------------------------------------------\n");
+        printf("\n");
+        printf("                     ASCII Art Text Printer\n");
+        printf("\n");
+        printf("--------------------------------------------------------------\n");
+        printf("\n");
+        printf("This program takes a string of text as input from the user and\n");
+        printf("outputs that text as ASCII art to the terminal.\n");
+        printf("\n");
+        printf("Enter the string to convert: ");
+        char text[BUFF_SIZE];
+        fgets(text, sizeof(text), stdin);
+        int i = 0;
+        char ptr;
+        while(text[i]) {
+            ptr = text[i];
+            text[i] = (toupper(ptr));
+            ++i;
+        }
+        print(text);
     }
-    print(text);
+
     return(0);
 }
 
@@ -763,7 +790,361 @@ void print(char* string) {
                         case 6:
                             printf("  |/    ");
                             break;
+                        default:
+                            break;
                     }
+                    break;
+                case '.':
+                    switch(ind) {
+                        case 0:
+                            printf("        ");
+                            break;
+                        case 1:
+                            printf("        ");
+                            break;
+                        case 2:
+                            printf("        ");
+                            break;
+                        case 3:
+                            printf("        ");
+                            break;
+                        case 4:
+                            printf("  __    ");
+                            break;
+                        case 5:
+                            printf(" |  |   ");
+                            break;
+                        case 6:
+                            printf("  --    ");
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
+                case '-':
+                    switch(ind) {
+                        case 0:
+                            printf("        ");
+                            break;
+                        case 1:
+                            printf("        ");
+                            break;
+                        case 2:
+                            printf("   ___  ");
+                            break;
+                        case 3:
+                            printf("  |___| ");
+                            break;
+                        case 4:
+                            printf("        ");
+                            break;
+                        case 5:
+                            printf("        ");
+                            break;
+                        case 6:
+                            printf("        ");
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
+                case '$':
+                    switch(ind) {
+                        case 0:
+                            printf(" $$$$$  ");
+                            break;
+                        case 1:
+                            printf("$$ $  $$");
+                            break;
+                        case 2:
+                            printf("$$ $    ");
+                            break;
+                        case 3:
+                            printf(" $$$$$$ ");
+                            break;
+                        case 4:
+                            printf("   $  $$");
+                            break;
+                        case 5:
+                            printf("$$ $  $$");
+                            break;
+                        case 6:
+                            printf(" $$$$$  ");
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
+                case '0':
+                    switch(ind) {
+                        case 0:
+                            printf(" _____  ");
+                            break;
+                        case 1:
+                            printf("/  _  \\ ");
+                            break;
+                        case 2:
+                            printf("| | | | ");
+                            break;
+                        case 3:
+                            printf("| | | | ");
+                            break;
+                        case 4:
+                            printf("| |_| | ");
+                            break;
+                        case 5:
+                            printf("\\_____/ ");
+                            break;
+                        case 6:
+                            printf("        ");
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
+                case '1':
+                    switch(ind) {
+                        case 0:
+                            printf("  ___   ");
+                            break;
+                        case 1:
+                            printf(" |_  |  ");
+                            break;
+                        case 2:
+                            printf("   | |  ");
+                            break;
+                        case 3:
+                            printf("   | |  ");
+                            break;
+                        case 4:
+                            printf("  _| |_ ");
+                            break;
+                        case 5:
+                            printf(" |_____|");
+                            break;
+                        case 6:
+                            printf("        ");
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
+                case '2':
+                    switch(ind) {
+                        case 0:
+                            printf("  ____  ");
+                            break;
+                        case 1:
+                            printf(" |    | ");
+                            break;
+                        case 2:
+                            printf(" |__  | ");
+                            break;
+                        case 3:
+                            printf(" |    | ");
+                            break;
+                        case 4:
+                            printf(" |  __| ");
+                            break;
+                        case 5:
+                            printf(" |____| ");
+                            break;
+                        case 6:
+                            printf("        ");
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
+                case '3':
+                    switch(ind) {
+                        case 0:
+                            printf("  ____  ");
+                            break;
+                        case 1:
+                            printf(" |__  | ");
+                            break;
+                        case 2:
+                            printf(" |    | ");
+                            break;
+                        case 3:
+                            printf(" |__  | ");
+                            break;
+                        case 4:
+                            printf(" |    | ");
+                            break;
+                        case 5:
+                            printf(" |____| ");
+                            break;
+                        case 6:
+                            printf("        ");
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
+                case '4':
+                    switch(ind) {
+                        case 0:
+                            printf("  ____  ");
+                            break;
+                        case 1:
+                            printf(" | |  | ");
+                            break;
+                        case 2:
+                            printf(" | |  | ");
+                            break;
+                        case 3:
+                            printf(" |__  | ");
+                            break;
+                        case 4:
+                            printf("   |  | ");
+                            break;
+                        case 5:
+                            printf("   |__| ");
+                            break;
+                        case 6:
+                            printf("        ");
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
+                case '5':
+                    switch(ind) {
+                        case 0:
+                            printf("  ____  ");
+                            break;
+                        case 1:
+                            printf(" |  __| ");
+                            break;
+                        case 2:
+                            printf(" |__  | ");
+                            break;
+                        case 3:
+                            printf("   |  | ");
+                            break;
+                        case 4:
+                            printf("  _|  | ");
+                            break;
+                        case 5:
+                            printf(" |____| ");
+                            break;
+                        case 6:
+                            printf("        ");
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
+                case '6':
+                    switch(ind) {
+                        case 0:
+                            printf("  ____  ");
+                            break;
+                        case 1:
+                            printf(" |  __| ");
+                            break;
+                        case 2:
+                            printf(" |  |   ");
+                            break;
+                        case 3:
+                            printf(" |  |__ ");
+                            break;
+                        case 4:
+                            printf(" |  . | ");
+                            break;
+                        case 5:
+                            printf(" |____| ");
+                            break;
+                        case 6:
+                            printf("        ");
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
+                case '7':
+                    switch(ind) {
+                        case 0:
+                            printf("  ____  ");
+                            break;
+                        case 1:
+                            printf(" | _  | ");
+                            break;
+                        case 2:
+                            printf(" |_|| | ");
+                            break;
+                        case 3:
+                            printf("    | | ");
+                            break;
+                        case 4:
+                            printf("    | | ");
+                            break;
+                        case 5:
+                            printf("    |_| ");
+                            break;
+                        case 6:
+                            printf("        ");
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
+                case '8':
+                    switch(ind) {
+                        case 0:
+                            printf("  _____  ");
+                            break;
+                        case 1:
+                            printf(" |     | ");
+                            break;
+                        case 2:
+                            printf(" |  .  | ");
+                            break;
+                        case 3:
+                            printf(" |     | ");
+                            break;
+                        case 4:
+                            printf(" |  .  | ");
+                            break;
+                        case 5:
+                            printf(" |_____| ");
+                            break;
+                        case 6:
+                            printf("        ");
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
+                case '9':
+                    switch(ind) {
+                        case 0:
+                            printf("  ____  ");
+                            break;
+                        case 1:
+                            printf(" |  . | ");
+                            break;
+                        case 2:
+                            printf(" |__  | ");
+                            break;
+                        case 3:
+                            printf("   |  | ");
+                            break;
+                        case 4:
+                            printf("  _|  | ");
+                            break;
+                        case 5:
+                            printf(" |____| ");
+                            break;
+                        case 6:
+                            printf("        ");
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
                 default:
                     break;
             }
