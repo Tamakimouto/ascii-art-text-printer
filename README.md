@@ -24,6 +24,6 @@ $ ./print
 either with or without arguments.
 
 ### Screenshot:
-![screenshot](ascii-art-screenshot.png "Screenshot of the program in action without arguments")
+![screenshot](img/ascii-art-screenshot.png "Screenshot of the program in action without arguments")
 
-![screenshot](ascii-art-screenshot2.png "Screenshot of the program in action with arguments")
+![screenshot](img/ascii-art-screenshot2.png "Screenshot of the program in action with arguments")
