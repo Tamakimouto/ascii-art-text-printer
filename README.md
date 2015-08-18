@@ -5,7 +5,7 @@ This program takes a string of text from the user and converts it to ASCII Art. 
 
 The program works much like a [dot matrix printer](http://en.wikipedia.org/wiki/Dot_matrix_printing). Each glyph is seven lines tall and eight characters wide (With the exception of the number 8). The program prints the first line of the whole string, prints a line feed, and then prints the second line of the whole string, and it continues in like fashion until all seven lines are printed. As such, if the string is wider than the terminal, the results will be quite ugly.
 
-###Building
+### Building
 To compile simply
 ```
 $ make
@@ -16,5 +16,14 @@ and to get rid of the executable
 $ make clean
 ```
 
-###Screenshot:
-![screenshot](ascii-art-screenshot.png "Screenshot of the program in action")
+### Running
+The makefile compiles to an executable called print, you can
+```
+$ ./print
+```
+either with or without arguments.
+
+### Screenshot:
+![screenshot](ascii-art-screenshot.png "Screenshot of the program in action without arguments")
+
+![screenshot](ascii-art-screenshot2.png "Screenshot of the program in action with arguments")
