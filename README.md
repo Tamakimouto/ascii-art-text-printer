@@ -7,14 +7,14 @@ The program works much like a [dot matrix printer](http://en.wikipedia.org/wiki/
 
 ###Building
 To compile simply
-
+```
 $ make
-
+```
 
 and to get rid of the executable
-
+```
 $ make clean
-
+```
 
 ###Screenshot:
 ![screenshot](ascii-art-screenshot.png "Screenshot of the program in action")
